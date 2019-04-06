@@ -2,7 +2,7 @@
   "name": "startse-inteligence",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lab.diogorusso.com/startse-inteligence",
+  "homepage": "https://lab.diogorusso.com/startse-intelligence",
   "dependencies": {
     "antd": "^3.16.1",
     "gh-pages": "^2.0.1",

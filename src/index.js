@@ -7,7 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import { HashRouter, Route} from "react-router-dom";
 
 ReactDOM.render((
-    <HashRouter>
+    <HashRouter basename='/'>
         <Route exact path="/" component={App} />
         <Route exact path="/thesis" component={ProjectThesis} />
     </HashRouter>
