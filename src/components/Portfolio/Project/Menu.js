@@ -17,14 +17,21 @@ const TabPane = Tabs.TabPane;
 class ProjectMenu extends Component{
   render(){
     return(
-      <Collapse bordered={false} defaultActiveKey={['1']}>
-        <Panel header="Project Title" key="1" style={{fontSize:'18px', border:'none'}}>
+      <Collapse 
+        bordered={false} 
+        defaultActiveKey={['1']}
+        expandIcon={({ isActive }) => <Icon type="menu-unfold" rotate={isActive ? 90 : 0} />}
+      >
+        <Panel header="Project Really Long Title" 
+              key="1" 
+              style={{fontSize:'18px', border:'none'}}
+              showArrow={false}
+        >
           <Collapse 
             bordered={false} 
-            defaultActiveKey={['1']}
-            expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
+            defaultActiveKey={['1']} 
           >
-          <Panel header="Tese" key="1" style={{padding:'0',fontSize:'16px'}}>
+          <Panel header="Tese" key="1" style={{fontSize:'18px'}}>
             <Collapse 
               bordered={false} 
               defaultActiveKey={['1']}
@@ -105,7 +112,7 @@ class ProjectMenu extends Component{
             </Collapse>
             
           </Panel>
-          <Panel header="Horizontes de Inovação" key="2" style={{padding:'0'}}>
+          <Panel header="Horizontes" key="2" style={{fontSize:'18px'}}>
             <Menu defaultSelectedKeys={['1']} mode="inline">
               <Menu.Item key="1">
                 <span>Industry</span>
@@ -141,7 +148,7 @@ class ProjectMenu extends Component{
               </Menu.Item>
             </Menu>
           </Panel>
-          <Panel header="Pipeline Startups" key="3" style={{padding:'0'}}>
+          <Panel header="Pipeline" key="3" style={{fontSize:'18px'}}>
             <Menu defaultSelectedKeys={['1']} mode="inline">
               <Menu.Item key="1">
                 <span>Industry</span>

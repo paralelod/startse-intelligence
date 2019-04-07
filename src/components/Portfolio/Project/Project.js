@@ -4,7 +4,7 @@ import {
   Dropdown,Row, Col, Collapse, Layout, Button, Tabs,Menu, Typography, Card, Icon, 
 } from 'antd';
 import ProjectMenu from './Menu'
-import Thesis from './Thesis/Thesis'
+import Wizard from './Wizard'
 
 import Media from 'react-media';
 
@@ -24,11 +24,11 @@ class Project extends Component{
       <Layout>
         <Layout>
           <Row>
-            <Col xs={24} lg={5} style={{padding:'8px 0 16px 24px',background:'#fff'}}>
+            <Col xs={24} lg={5} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
               <ProjectMenu/>
             </Col>
             <Col xs={24} lg={19} style={{padding:'12px 24px'}}>
-                <Thesis/>
+                <Wizard/>
             </Col>
           </Row>
         </Layout>
