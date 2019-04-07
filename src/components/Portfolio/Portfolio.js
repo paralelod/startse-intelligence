@@ -56,7 +56,7 @@ class Tabbed extends React.Component {
 
   render() {
     return (
-      <div style={{position:'relative'}}>
+      <div style={{position:'relative', background:'#001529'}}>
         
         <Tabs
           onChange={this.onChange}
@@ -64,8 +64,8 @@ class Tabbed extends React.Component {
           type="editable-card"
           onEdit={this.onEdit}
           className='Tabbed'
-          style={{marginTop:'64px'}}
-          tabBarStyle={{position:'fixed',top:'24px',maxWidth:'65%',zIndex:3}}
+          // style={{display: 'inline-block'}}
+          tabBarStyle={{position:'relative',top:'17px',zIndex:3,display: 'inline-block'}}
         >
           
           {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}><Project/></TabPane>)}

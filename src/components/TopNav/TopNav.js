@@ -7,7 +7,7 @@ const SubMenu = Menu.SubMenu;
 class TopNav extends Component {
   render(){
     return(
-      <Header className="header" style={{position: 'fixed', zIndex: 1, width: '100%', paddingLeft:'24px' }}>
+      <Header className="header" style={{position: 'fixed', zIndex: 4, width: '100%', paddingLeft:'24px' }}>
           <Menu
             theme="dark"
             mode="horizontal"

@@ -30,14 +30,14 @@ class Project extends Component {
             matches ? (
               <Layout>
                 <TopNav/>
-                <Content>
+                <Content style={{marginTop:'64px'}}>
                   <Portfolio/>
                 </Content>
               </Layout>
             ) : (
               <Layout>
                 <SideNav/>
-                <TopNav/>
+                {/* <TopNav/> */}
                 <Content>
                   <Portfolio/>
                 </Content>
