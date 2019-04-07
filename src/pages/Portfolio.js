@@ -6,6 +6,8 @@ import {
   Row, Col, Collapse, Layout, Button,Dropdown, Avatar,Tabs,Menu, Typography, Card, Breadcrumb, Icon,PageHeader, Divider, 
 } from 'antd';
 
+import Media from 'react-media';
+
 import TopNav from '../components/TopNav/TopNav';
 import SideNav from '../components/SideNav/SideNav';
 import Portfolio from '../components/Portfolio/Portfolio';
@@ -21,13 +23,28 @@ const TabPane = Tabs.TabPane;
 class Project extends Component {
   render() {
     return (
-      <Layout>
-        <SideNav/>
-        <TopNav/>
-        <Content>
-          <Portfolio/>
-        </Content>
-      </Layout>
+      <div>
+        <Media query="(max-width: 768px)">
+          {matches =>
+            matches ? (
+              <Layout>
+                <TopNav/>
+                <Content>
+                  <Portfolio/>
+                </Content>
+              </Layout>
+            ) : (
+              <Layout>
+                <SideNav/>
+                <TopNav/>
+                <Content>
+                  <Portfolio/>
+                </Content>
+              </Layout>
+            )
+          }
+        </Media>
+      </div>
     );
   }
 }

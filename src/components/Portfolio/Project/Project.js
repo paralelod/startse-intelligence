@@ -6,6 +6,8 @@ import {
 import ProjectMenu from './Menu'
 import Thesis from './Thesis/Thesis'
 
+import Media from 'react-media';
+
 const { Header, Content, Sider } = Layout;
 const { Title } = Typography;
 const { Text } = Typography;
@@ -30,13 +32,15 @@ class Project extends Component{
             </Col>
           </Row>
         </Layout>
-        <Sider 
-          collapsible 
-          reverseArrow 
-          collapsedWidth='0' 
-          theme='light'
-        >
-        </Sider>
+        <Media query="(min-width: 768px)">
+          <Sider 
+            collapsible 
+            reverseArrow 
+            collapsedWidth='0' 
+            theme='light'
+          >
+          </Sider>
+        </Media>
       </Layout>
     )
   }
