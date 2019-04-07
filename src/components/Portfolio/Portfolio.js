@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layout,Menu,Tabs, Button } from 'antd';
-import ProjectThesis from '../components/Portfolio/Project/Thesis/Thesis'
+import Project from './Project/Project'
 
 const { Header, Content, Sider } = Layout;
 const TabPane = Tabs.TabPane;
@@ -68,7 +68,7 @@ class Tabbed extends React.Component {
           tabBarStyle={{position:'fixed',top:'24px',maxWidth:'65%',zIndex:3}}
         >
           
-          {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}><ProjectThesis/></TabPane>)}
+          {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}><Project/></TabPane>)}
         </Tabs>
       </div>
     );

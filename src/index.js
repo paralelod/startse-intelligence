@@ -2,14 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import ProjectThesis from './components/Portfolio/Project/Thesis/Thesis'
+import Project from './pages/Portfolio'
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Route} from "react-router-dom";
 
 ReactDOM.render((
     <HashRouter basename='/'>
         <Route exact path="/" component={App} />
-        <Route exact path="/thesis" component={ProjectThesis} />
+        <Route exact path="/project" component={Project} />
     </HashRouter>
 ), document.getElementById('root'))
 

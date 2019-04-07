@@ -7,32 +7,15 @@ import {
   Row, Col, Collapse, Layout, Button,Dropdown, Avatar,Tabs,Menu, Typography, Card, Breadcrumb, Icon,PageHeader, Divider, 
 } from 'antd';
 
-import TopNav from './components/TopNav/TopNav';
-import SideNav from './components/SideNav/SideNav';
-import Tabbed from './pages/Tabbed';
-
-const { Header, Content, Sider } = Layout;
-const { Title } = Typography;
-const { Text } = Typography;
-const Panel = Collapse.Panel;
-const SubMenu = Menu.SubMenu;
-const MenuItemGroup = Menu.ItemGroup;
-const TabPane = Tabs.TabPane;
+import WrappedNormalLoginForm from './pages/Login';
 
 class App extends Component {
-  
-  
   render() {
-    return (
+    return(
       <Layout>
-        <TopNav/>
-        <Layout>
-          <SideNav/>
-          <Content>
-            <Tabbed/>
-          </Content>
-        </Layout>
+        <WrappedNormalLoginForm/>
       </Layout>
+
     );
   }
 }

@@ -13,7 +13,7 @@ const { Sider } = Layout;
 class SideNav extends Component {
   render(){
     return(
-      <Sider collapsible style={{ position: 'relative',zIndex:4}}>
+      <Sider collapsible style={{ position: 'relative',zIndex:2}}>
         <div style={{ position: 'fixed', width:'inherit',paddingTop:'24px'}}>
           <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
             <Menu.Item key="logo">
@@ -21,13 +21,13 @@ class SideNav extends Component {
               <span><LogoTypo /></span>
             </Menu.Item>
             <Menu.Item key="1">
-            <Link to="/thesis" activeClassName='item-selected'>
+            <Link to="/project" activeClassName='item-selected'>
                 <Icon type="desktop" />
                 <span>Reports</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/" activeClassName='item-selected'>
+              <Link to="/project" activeClassName='item-selected'>
                 <Icon type="desktop" />
                 <span>Portfolio</span>
               </Link>
