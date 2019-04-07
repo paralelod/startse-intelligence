@@ -17,17 +17,19 @@ class SideNav extends Component {
         <div style={{ position: 'fixed', width:'inherit',paddingTop:'16px'}}>
           <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
             <Menu.Item key="logo">
-              <LogoGlyph style={{marginLeft:'-8px'}} />
-              <span><LogoTypo /></span>
+              <Link to="/">
+                <LogoGlyph style={{marginLeft:'-8px'}} />
+                <span><LogoTypo /></span>
+              </Link>
             </Menu.Item>
             <Menu.Item key="1">
-            <Link to="/project" activeClassName='item-selected'>
+              <Link to="/wizard" activeClassName='item-selected'>
                 <Icon type="compass" theme="filled" />
                 <span>Reports</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="2">
-              <Link to="/project" activeClassName='item-selected'>
+              <Link to="/logged/portfolio" activeClassName='item-selected'>
                 <Icon type="thunderbolt" theme="filled"/>
                 <span>Portfolio</span>
               </Link>
