@@ -8,6 +8,7 @@ import App from './App';
 import Login from './components/Auth/Login'
 import Signup from './components/Auth/Signup';
 import RecoverPwd from './components/Auth/Pwd/RequestNew'
+import CreatePwd from './components/Auth/Pwd/CreateNew'
 import Portfolio from './components/Portfolio/Portfolio'
 import AppRoute from "./layouts/App/AppRoute";
 import DefaultRoute from "./layouts/Default/DefaultRoute";
@@ -20,6 +21,7 @@ ReactDOM.render((
         )}/>
         <DefaultRoute exact path="/login"  component={Login} />
         <DefaultRoute exact path="/recover"  component={RecoverPwd} />
+        <DefaultRoute exact path="/new-password"  component={CreatePwd} />
         <DefaultRoute path="/signup" component={Signup} />
         <Route exact path="/logged" render={() => (
             <Redirect to="/logged/portfolio"/>

@@ -71,7 +71,12 @@ class NormalLoginForm extends React.Component {
                 Forgot Password? 
                 <Link to="/recover" style={{paddingLeft:'8px'}}>
                   Let Us Help
-                </Link>
+                </Link>.
+                <br/>
+                Dont have an account? 
+                <Link to="/recover" style={{paddingLeft:'8px'}}>
+                  Sign Up Now
+                </Link>.
               </div>
             </FormItem>
           </Form>

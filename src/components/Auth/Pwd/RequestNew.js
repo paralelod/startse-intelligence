@@ -47,7 +47,7 @@ class NormalLoginForm extends React.Component {
             </FormItem>
 
             <FormItem>
-              <Link to="/logged">
+              <Link to="/new-password">
                 <Button
                   type="primary"
                   htmlType="submit"
@@ -59,7 +59,7 @@ class NormalLoginForm extends React.Component {
               <br/>
             </FormItem>
           </Form>
-          <p>If you don't have an account <Link to='signup'>click here</Link> to setup a new account</p>
+          <p>If you don't have an account <Link to='/signup'>click here</Link> to setup a new account</p>
         </Col>
       </Row>
     );
