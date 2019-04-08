@@ -18,13 +18,22 @@ function UserMenu(props) {
             style={{ lineHeight: '64px',float: 'right' }}
           >
             <SubMenu key="sub1" title={<Avatar size="large">LG</Avatar>}>
-                <Menu.Item key="3">
-                  <Link to="/">Loggout</Link>
-                </Menu.Item>
-              {/* <SubMenu key="sub1-2" title="Submenu">
+              <Menu.Item key="Reports">
+                <Link to="/logged">Reports</Link>
+              </Menu.Item>
+              <Menu.Item key="Portfolio">
+                <Link to="/logged">Portfolio</Link>
+              </Menu.Item>
+              <Menu.Item key="Intelligence">
+                <Link to="/logged">Intelligence</Link>
+              </Menu.Item>
+              <SubMenu key="sub1-2" title="Settings">
                 <Menu.Item key="5">Option 5</Menu.Item>
                 <Menu.Item key="6">Option 6</Menu.Item>
-              </SubMenu> */}
+              </SubMenu>
+              <Menu.Item key="Loggout">
+                <Link to="/">Loggout</Link>
+              </Menu.Item>
             </SubMenu>
           </Menu>
   );
