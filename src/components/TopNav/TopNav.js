@@ -50,7 +50,7 @@ class TopNav extends Component {
     }
 
     return(
-      <Header className="header" style={{position: 'fixed', zIndex: 4, width: '100%', padding:'0 16px' }}>
+      <Header className="header" style={{position: 'fixed', zIndex: 4, width: '100%', padding:'0 8px' }}>
           <img src={logo}/>
           {adminBar}
         </Header>
