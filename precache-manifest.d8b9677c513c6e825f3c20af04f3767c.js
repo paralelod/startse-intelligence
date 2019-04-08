@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/js/runtime~main.88d0dc13.js"
   },
   {
-    "revision": "4cc6674f8247d5bff160",
-    "url": "/startse-intelligence/static/js/main.deee51aa.chunk.js"
+    "revision": "a3650e09e2d1732b8f76",
+    "url": "/startse-intelligence/static/js/main.41dd0ade.chunk.js"
   },
   {
     "revision": "efb9cfbfb180dc5e816e",
     "url": "/startse-intelligence/static/js/2.b8745f49.chunk.js"
   },
   {
-    "revision": "4cc6674f8247d5bff160",
+    "revision": "a3650e09e2d1732b8f76",
     "url": "/startse-intelligence/static/css/main.826d94bb.chunk.css"
   },
   {
@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/css/2.d962b8be.chunk.css"
   },
   {
-    "revision": "28cd924bf686c5cdfe1b47ef22df52dd",
+    "revision": "06620008e8622152981fb2b448d5468e",
     "url": "/startse-intelligence/index.html"
   }
 ];
