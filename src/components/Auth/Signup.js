@@ -27,7 +27,7 @@ class NormalLoginForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Row type="flex" justify="space-around" align="middle" style={{minHeight:'100vh',background:'#f0f2f5'}}>
+      <Row type="flex" justify="space-around" align="middle" style={{minHeight:'calc(100vh - 64px)',background:'#f0f2f5'}}>
         <Col xs={20} md={12} lg={10}>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
@@ -57,24 +57,23 @@ class NormalLoginForm extends React.Component {
             </FormItem>
 
             <FormItem>
-              {getFieldDecorator("remember", {
-                valuePropName: "checked",
-                initialValue: true
-              })(<Checkbox>Remember me</Checkbox>)}
-              <a className="login-form-forgot" href="">
-                Forgot password
-              </a>
               <Link to="/logged">
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
                 >
-                  Log in
+                  Signup 
                 </Button>
               </Link>
-              
-              Or <Link to="/signup">register now!</Link>
+              <br/><br/>
+              <div>
+                Already have an account? 
+                <Link to="/login" style={{paddingLeft:'8px'}}>
+                  Login Now
+                </Link>
+              </div>
+              <br/>
             </FormItem>
           </Form>
         </Col>

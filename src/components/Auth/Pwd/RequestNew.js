@@ -29,6 +29,8 @@ class NormalLoginForm extends React.Component {
     return (
       <Row type="flex" justify="space-around" align="middle" style={{minHeight:'calc(100vh - 64px)',background:'#f0f2f5'}}>
         <Col xs={20} md={12} lg={10}>
+          <h1>Forgot your password?</h1>
+          <p>Type your username or email in the filed bellow to receive your validation code</p>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
               {getFieldDecorator("userName", {
@@ -45,36 +47,19 @@ class NormalLoginForm extends React.Component {
             </FormItem>
 
             <FormItem>
-              {getFieldDecorator("password", {
-                rules: [{ required: true, message: "Please input your Password!" }]
-              })(
-                <Input
-                  prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
-                  type="password"
-                  placeholder="Password"
-                />
-              )}
-            </FormItem>
-
-            <FormItem>
               <Link to="/logged">
                 <Button
                   type="primary"
                   htmlType="submit"
                   className="login-form-button"
                 >
-                  Log in
+                  Send Validation Code
                 </Button>
               </Link>
-              <br/><br/>
-              <div>
-                Forgot Password? 
-                <Link to="/recover" style={{paddingLeft:'8px'}}>
-                  Let Us Help
-                </Link>
-              </div>
+              <br/>
             </FormItem>
           </Form>
+          <p>If you don't have an account <Link to='signup'>click here</Link> to setup a new account</p>
         </Col>
       </Row>
     );
