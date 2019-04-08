@@ -4,7 +4,7 @@ import {
   Dropdown,Row, Col, Collapse, Layout, Button, Tabs,Menu, Typography, Card, Icon, 
 } from 'antd';
 import ProjectMenu from './Menu'
-import Wizard from './Wizard2'
+import Wizard from './Thesis/Thesis'
 
 
 import Media from 'react-media';

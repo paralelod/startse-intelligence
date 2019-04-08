@@ -88,36 +88,32 @@ class ProjectMenu extends Component{
                   <Panel header="Pesquisa" style={{border:'none'}}>
                     <Menu defaultSelectedKeys={['1']} mode="inline">
                       <Menu.Item key="1">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
+                        <span>Industry Overview</span>
                       </Menu.Item>
                       <Menu.Item key="2">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
+                        <span>Business Model</span>
                       </Menu.Item>
                       <Menu.Item key="3">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
+                        <span>Declining Business Units</span>
                       </Menu.Item>
                       <Menu.Item key="4">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
+                        <span>Trends, Technologies and Market</span>
                       </Menu.Item>
                       <Menu.Item key="5">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
+                        <span>Threats, Opportunities and Competitors</span>
                       </Menu.Item>
                       <Menu.Item key="6">
-                        <span>Industry</span>
-                        <Icon type="pie-chart" />
+                      <Icon type="pie-chart" />
+                        <span>Strategy</span>
                       </Menu.Item>
                       <Menu.Item key="7">
-                        <span>Industry</span>
                         <Icon type="pie-chart" />
-                      </Menu.Item>
-                      <Menu.Item key="8">
-                        <span>Industry</span>
-                        <Icon type="pie-chart" />
+                        <span>Focus</span>
                       </Menu.Item>
                     </Menu>
                   </Panel>
