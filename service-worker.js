@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/startse-intelligence/precache-manifest.d8b9677c513c6e825f3c20af04f3767c.js"
+  "/startse-intelligence/precache-manifest.02a9c7bc6e51c7856c9d9159de231082.js"
 );
 
 workbox.clientsClaim();
