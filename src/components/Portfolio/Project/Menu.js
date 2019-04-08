@@ -28,24 +28,15 @@ class ProjectMenu extends Component{
   render(){
     return(
       
-      <Collapse 
-        bordered={false} 
-        defaultActiveKey={['ProjectTitle']}
-        expandIcon={({ isActive }) => <Icon type="menu-unfold" rotate={isActive ? 90 : 0} />}
-      >
-        <Panel header="Project Really Long Title" 
-              key="ProjectTitle" 
-              style={{fontSize:'18px', border:'none'}}
-              showArrow={false}
-        >
-          <Collapse
+     <Collapse
             bordered={false} 
             defaultActiveKey={this.props.showSummary}
             expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
           >
             <Panel 
-              header='Summary'
-              key="ProjectSummary" 
+              header="Project Really Long Title" 
+              key="ProjectSummary"
+              style={{fontSize:'18px', border:'none'}} 
               >
               <Collapse 
                 bordered={false} 
@@ -135,8 +126,6 @@ class ProjectMenu extends Component{
                 </Panel>
                 
             </Collapse>
-            </Panel>
-          </Collapse>
         </Panel>
       </Collapse>
     )
