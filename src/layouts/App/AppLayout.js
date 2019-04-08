@@ -21,16 +21,16 @@ const AppLayout = ({ children, ...rest }) => {
       <Media query="(max-width: 768px)">
         {matches =>
           matches ? (
-            <Layout>
-              <TopNav/>
-              <Content style={{marginTop:'64px',background:'#001529'}}>
+            <Layout style={{background:'#001529'}}>
+              <TopNav logged/>
+              <Content style={{marginTop:'63px',background:'transparent'}}>
                 {children}
               </Content>
             </Layout>
           ) : (
-            <Layout>
+            <Layout style={{background:'#001529'}}>
               <SideNav/>
-              <Content style={{background:'#001529'}}>
+              <Content style={{background:'transparent'}}>
                 {children}
               </Content>
             </Layout>

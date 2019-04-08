@@ -25,9 +25,18 @@ class Project extends Component{
       <Layout>
         <Layout>
           <Row>
-            <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
-              <ProjectMenu/>
-            </Col>
+            
+              <Media query="(min-width: 992px)">
+                <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff', minHeight:'100vh'}}>
+                  <ProjectMenu showSummary='ProjectSummary'/>
+                </Col>
+              </Media>
+              <Media query="(max-width: 991px)">
+              <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
+                  <ProjectMenu/>
+                </Col>
+              </Media>
+            
             <Col xs={24} lg={16} style={{padding:'12px 24px'}}>
                 <Wizard/>
             </Col>

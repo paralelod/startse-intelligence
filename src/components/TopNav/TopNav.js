@@ -6,12 +6,12 @@ import logo from './logo.svg';
 const { Header} = Layout;
 const SubMenu = Menu.SubMenu;
 
-class TopNav extends Component {
-  render(){
-    return(
-      <Header className="header" style={{position: 'fixed', zIndex: 4, width: '100%', padding:'0 16px' }}>
-          <img src={logo}/>
-          {/* <Menu
+
+
+
+function UserMenu(props) {
+  return(
+    <Menu
             theme="dark"
             mode="horizontal"
             defaultSelectedKeys={['2']}
@@ -25,7 +25,24 @@ class TopNav extends Component {
                 <Menu.Item key="6">Option 6</Menu.Item>
               </SubMenu>
             </SubMenu>
-          </Menu> */}
+          </Menu>
+  );
+}
+
+
+class TopNav extends Component {
+  render(){
+    let adminBar = null;
+
+    if(this.props.logged)
+    {
+        adminBar = <UserMenu/>;
+    }
+
+    return(
+      <Header className="header" style={{position: 'fixed', zIndex: 4, width: '100%', padding:'0 16px' }}>
+          <img src={logo}/>
+          {adminBar}
         </Header>
     )
   }

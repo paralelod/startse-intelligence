@@ -20,20 +20,23 @@ class ProjectMenu extends Component{
       
       <Collapse 
         bordered={false} 
-        defaultActiveKey={['1']}
+        defaultActiveKey={['ProjectTitle']}
         expandIcon={({ isActive }) => <Icon type="menu-unfold" rotate={isActive ? 90 : 0} />}
       >
         <Panel header="Project Really Long Title" 
-              key="1" 
+              key="ProjectTitle" 
               style={{fontSize:'18px', border:'none'}}
               showArrow={false}
         >
           <Collapse
             bordered={false} 
-            defaultActiveKey={['1']}
+            defaultActiveKey={this.props.showSummary}
             expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
           >
-            <Panel header={'Overview'}>
+            <Panel 
+              header={'ProjectSummary'}
+              key="ProjectSummary" 
+              >
               <Collapse 
                 bordered={false} 
                 defaultActiveKey={['1']} 
