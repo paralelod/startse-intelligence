@@ -65,7 +65,7 @@ class Tabbed extends React.Component {
           onEdit={this.onEdit}
           className='Tabbed'
           // style={{display: 'inline-block'}}
-          tabBarStyle={{position:'relative',top:'17px',maxWidth:'90%',zIndex:3,display: 'inline-block'}}
+          tabBarStyle={{position:'relative',top:'17px',maxWidth:'93%',zIndex:3,display: 'inline-block'}}
         >
           {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
         </Tabs>

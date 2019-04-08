@@ -22,38 +22,58 @@ const TabPane = Tabs.TabPane;
 class Project extends Component{
   render(){
     return(
-      <Layout>
-        <Layout>
-          <Row>
-            
-              <Media query="(min-width: 992px)">
-                <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff', minHeight:'100vh'}}>
-                  <ProjectMenu showSummary='ProjectSummary'/>
-                </Col>
-              </Media>
-              <Media query="(max-width: 991px)">
-              <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
-                  <ProjectMenu/>
-                </Col>
-              </Media>
-            
-            <Col xs={24} lg={16} style={{padding:'12px 24px'}}>
-                <Wizard/>
-            </Col>
-          </Row>
-        </Layout>
+      <div>
+        <Media query="(max-width: 1179px)">
+          <Layout>
+            <Row>
+              <Col xs={24} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
+                <ProjectMenu/>
+              </Col>
+              <Col xs={24} style={{padding:'12px 24px'}}>
+                  <Wizard/>
+              </Col>
+            </Row>
+          </Layout>
+        </Media>
+
         <Media query="(min-width: 1180px)">
+          <Layout>
+          <Sider 
+            collapsible 
+            collapsedWidth='0' 
+            theme='light'
+            width='320'
+            style={{zIndex:4,minHeight:'100vh'}}
+          >
+            <ProjectMenu showSummary='ProjectSummary'/>
+          </Sider>
+          <Layout>
+            <Row>
+              <Col xs={24} style={{padding:'12px 24px'}}>
+                  <Wizard/>
+              </Col>
+            </Row>
+          </Layout>
           <Sider 
             collapsible 
             reverseArrow 
             collapsedWidth='0' 
             theme='light'
+            width='240'
           >
           </Sider>
-        </Media>
-      </Layout>
+          </Layout>
+        </Media> 
+        
+      </div>
     )
   }
 }
 
 export default Project
+
+
+
+
+
+   
