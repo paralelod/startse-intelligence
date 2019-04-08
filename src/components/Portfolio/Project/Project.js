@@ -42,7 +42,7 @@ class Project extends Component{
             collapsible 
             collapsedWidth='0' 
             theme='light'
-            width='320'
+            width='280'
             style={{zIndex:4,minHeight:'100vh'}}
           >
             <ProjectMenu showSummary='ProjectSummary'/>
