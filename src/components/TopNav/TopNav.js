@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Layout,Avatar,Menu} from 'antd';
-
+import { Link } from "react-router-dom";
 import logo from './logo.svg';
 
 const { Header} = Layout;
@@ -18,12 +18,13 @@ function UserMenu(props) {
             style={{ lineHeight: '64px',float: 'right' }}
           >
             <SubMenu key="sub1" title={<Avatar size="large">LG</Avatar>}>
-              <Menu.Item key="3">Option 3</Menu.Item>
-              <Menu.Item key="4">Option 4</Menu.Item>
-              <SubMenu key="sub1-2" title="Submenu">
+                <Menu.Item key="3">
+                  <Link to="/">Loggout</Link>
+                </Menu.Item>
+              {/* <SubMenu key="sub1-2" title="Submenu">
                 <Menu.Item key="5">Option 5</Menu.Item>
                 <Menu.Item key="6">Option 6</Menu.Item>
-              </SubMenu>
+              </SubMenu> */}
             </SubMenu>
           </Menu>
   );
