@@ -28,7 +28,7 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <Row type="flex" justify="space-around" align="middle" style={{minHeight:'100vh',background:'#f0f2f5'}}>
-        <Col span={4}>
+        <Col xs={20} md={12} lg={10}>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
               {getFieldDecorator("userName", {
