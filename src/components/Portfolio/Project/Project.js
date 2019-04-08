@@ -6,6 +6,7 @@ import {
 import ProjectMenu from './Menu'
 import Wizard from './Wizard2'
 
+
 import Media from 'react-media';
 
 const { Header, Content, Sider } = Layout;
@@ -24,15 +25,15 @@ class Project extends Component{
       <Layout>
         <Layout>
           <Row>
-            <Col xs={24} lg={5} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
+            <Col xs={24} lg={8} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
               <ProjectMenu/>
             </Col>
-            <Col xs={24} lg={19} style={{padding:'12px 24px'}}>
+            <Col xs={24} lg={16} style={{padding:'12px 24px'}}>
                 <Wizard/>
             </Col>
           </Row>
         </Layout>
-        <Media query="(min-width: 768px)">
+        <Media query="(min-width: 1180px)">
           <Sider 
             collapsible 
             reverseArrow 

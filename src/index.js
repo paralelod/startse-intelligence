@@ -1,20 +1,21 @@
 import React, { Component }  from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import WrappedNormalSignupForm from './pages/Signup';
+import WrappedNormalSignupForm from './components/Auth/Signup';
 import * as serviceWorker from './serviceWorker';
 import { HashRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import App from './App';
-import Login from './pages/Login'
+import Login from './components/Auth/Login'
 import Portfolio from './components/Portfolio/Portfolio'
-import AppRoute from "./layouts/AppRoute";
+import AppRoute from "./layouts/App/AppRoute";
+import DefaultRoute from "./layouts/Default/DefaultRoute";
 
 
 ReactDOM.render((
     <HashRouter basename='/'>
-        <Route exact path="/"  component={Login} />
-        <Route path="/signup" component={WrappedNormalSignupForm} />
+        <DefaultRoute exact path="/"  component={Login} />
+        <DefaultRoute path="/signup" component={WrappedNormalSignupForm} />
         <Route exact path="/logged" render={() => (
             <Redirect to="/logged/portfolio"/>
         )}/>

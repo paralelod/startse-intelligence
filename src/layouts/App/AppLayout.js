@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Link,Switch, Redirect} from "react-router-dom";
 import 'antd/dist/antd.css';
-import '../index.css';
+import '../../index.css';
 import {
   Row, Col, Collapse, Layout, Button,Dropdown, Avatar,Tabs,Menu, Typography, Card, Breadcrumb, Icon,PageHeader, Divider, 
 } from 'antd';
 
 import Media from 'react-media';
 
-import TopNav from '../components/TopNav/TopNav';
-import SideNav from '../components/SideNav/SideNav';
+import TopNav from '../../components/TopNav/TopNav';
+import SideNav from '../../components/SideNav/SideNav';
 
 
 const { Header, Content, Sider } = Layout;
 
-const HomeLayout = ({ children, ...rest }) => {
+const AppLayout = ({ children, ...rest }) => {
   return (
     <div>
       <Media query="(max-width: 768px)">
@@ -23,14 +23,14 @@ const HomeLayout = ({ children, ...rest }) => {
           matches ? (
             <Layout>
               <TopNav/>
-              <Content>
+              <Content style={{marginTop:'64px',background:'#001529'}}>
                 {children}
               </Content>
             </Layout>
           ) : (
             <Layout>
               <SideNav/>
-              <Content>
+              <Content style={{background:'#001529'}}>
                 {children}
               </Content>
             </Layout>
@@ -41,4 +41,4 @@ const HomeLayout = ({ children, ...rest }) => {
   )
   }
  
-export default HomeLayout;
+export default AppLayout;

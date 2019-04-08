@@ -17,7 +17,7 @@ class SideNav extends Component {
         <div style={{ position: 'fixed', width:'inherit',paddingTop:'16px'}}>
           <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
             <Menu.Item key="logo">
-              <Link to="/">
+              <Link to="/logged">
                 <LogoGlyph style={{marginLeft:'-8px'}} />
                 <span><LogoTypo /></span>
               </Link>
@@ -43,8 +43,10 @@ class SideNav extends Component {
               <span>Settings</span>
             </Menu.Item>
             <Menu.Item key="5" style={{position:'absolute', bottom:'80px'}}>
-              <Icon type="logout"/>
-              <span>Logout</span>
+            <Link to="/" activeClassName='item-selected'>
+                <Icon type="logout"/>
+                <span>Logout</span>
+              </Link>
             </Menu.Item>
           </Menu>
         </div>

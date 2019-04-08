@@ -4,7 +4,7 @@ import { Row, Col,Form, Icon, Input, Button, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 
 const FormItem = Form.Item;
-class NormalSignupForm extends React.Component {
+class NormalLoginForm extends React.Component {
   checkUsername = (rule, value, callback) => {
     const form = this.props.form;
     form.setFields({
@@ -27,7 +27,7 @@ class NormalSignupForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Row type="flex" style={{minHeight:'100vh',background:'pink'}}>
+      <Row type="flex" justify="space-around" align="middle" style={{minHeight:'100vh',background:'#f0f2f5'}}>
         <Col span={4}>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
@@ -64,7 +64,7 @@ class NormalSignupForm extends React.Component {
               <a className="login-form-forgot" href="">
                 Forgot password
               </a>
-              <Link to="/project" activeClassName='item-selected'>
+              <Link to="/logged">
                 <Button
                   type="primary"
                   htmlType="submit"
@@ -74,7 +74,7 @@ class NormalSignupForm extends React.Component {
                 </Button>
               </Link>
               
-              Or <a href="">register now!</a>
+              Or <Link to="/signup">register now!</Link>
             </FormItem>
           </Form>
         </Col>
@@ -83,6 +83,6 @@ class NormalSignupForm extends React.Component {
   }
 }
 
-const WrappedNormalSignupForm = Form.create()(NormalSignupForm);
+const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
 
-export default WrappedNormalSignupForm
+export default WrappedNormalLoginForm
