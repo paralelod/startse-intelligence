@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Row, Col,Form, Icon, Input, Button, Checkbox } from "antd";
 import { Link } from "react-router-dom";
+import '../../index.css';
+
+import pattern from '../../pattern.svg';
+import logo from '../../logo.svg';
 
 const FormItem = Form.Item;
 class NormalLoginForm extends React.Component {
@@ -27,8 +31,13 @@ class NormalLoginForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Row type="flex" justify="space-around" align="middle" style={{minHeight:'calc(100vh - 64px)',background:'#f0f2f5'}}>
-        <Col xs={20} md={12} lg={10}>
+      <div style={{background:'linear-gradient(90deg, #0C304D 3%, #04223A 100%)'}}>
+      <Row type="flex" justify="space-around" align="middle" style={{textAlign:'center',minHeight:'100vh',backgroundImage:`url(${pattern})`}}>
+        <Col xs={18} md={8} lg={6}>
+          <img src={logo}/>
+          <br/><br/><br/>
+          <p style={{color:'white'}}>Don’t Have an Account? <Link to='/signup' style={{marginLeft:'8px'}}>Sign Up Now</Link></p>
+          <br/>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
               {getFieldDecorator("userName", {
@@ -37,51 +46,47 @@ class NormalLoginForm extends React.Component {
                   { validator: this.checkUsername }
                 ]
               })(
+                <div>
+                <div style={{lineHeight:'24px',textAlign:'left',color:'white'}}>Label</div>
                 <Input
                   prefix={<Icon type="user" style={{ fontSize: 13 }} />}
                   placeholder="Username"
                 />
+                </div>
               )}
             </FormItem>
-
             <FormItem>
               {getFieldDecorator("password", {
                 rules: [{ required: true, message: "Please input your Password!" }]
               })(
-                <Input
-                  prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
-                  type="password"
-                  placeholder="Password"
-                />
+                <div>
+                  <div style={{lineHeight:'24px',textAlign:'left',color:'white'}}>Label</div>
+                  <Input
+                    prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
+                    type="password"
+                    placeholder="Password"
+                  />
+                </div>
               )}
             </FormItem>
-
+                <br/>
             <FormItem>
               <Link to="/logged">
                 <Button
                   type="primary"
                   htmlType="submit"
-                  className="login-form-button"
+                  className="buttonSpecial"
+                  // style={{backgroundImage: 'linear-gradient(90deg, #05aba3 3%, #1890FF 100%)', minWidth:'100%'}}
                 >
                   Log in
                 </Button>
               </Link>
-              <br/><br/>
-              <div>
-                Forgot Password? 
-                <Link to="/recover" style={{paddingLeft:'8px'}}>
-                  Let Us Help
-                </Link>.
-                <br/>
-                Dont have an account? 
-                <Link to="/recover" style={{paddingLeft:'8px'}}>
-                  Sign Up Now
-                </Link>.
-              </div>
             </FormItem>
           </Form>
+          <p style={{color:'white'}}>Forgot Password? <Link to='/recover' style={{marginLeft:'8px'}}>Let Us Help</Link></p>
         </Col>
       </Row>
+      </div>
     );
   }
 }

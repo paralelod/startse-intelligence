@@ -18,8 +18,8 @@ const { Header, Content, Sider } = Layout;
 const DefaultLayout = ({ children, ...rest }) => {
   return (
     <Layout>
-      <TopNav/>
-      <Content style={{marginTop:'64px',background:'#001529'}}>
+      {/* <TopNav/> */}
+      <Content style={{background:'#001529'}}>
         {children}
       </Content>
     </Layout>

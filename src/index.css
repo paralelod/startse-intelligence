@@ -7,6 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #001529;
+  font-size:16px;
 }
 
 code {
@@ -22,6 +23,9 @@ code {
   float: left;
   margin-left:-12px;
 }
+
+
+
 
 .ant-layout-sider-children{
   width: inherit;
@@ -47,4 +51,23 @@ code {
 .ant-tabs-extra-content .ant-tabs-new-tab {
   background:#fff;
   color:black;
+}
+
+.buttonSpecial{ 
+    background:linear-gradient(90deg, rgb(5, 171, 163) 3%, rgb(24, 144, 255) 100%) !important;
+    background-color:transparent;
+    min-width: 100%;
+    transform: translate(0);
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 5px 24px rgba(0, 0, 0, 0.45) !important;
+    transition: all 0.3s cubic-bezier(0.645, 0.55, 0.355, 1) ease-in-out;
+}
+
+.buttonSpecial:hover{
+  background:linear-gradient(90deg, rgb(24, 144, 255) 3%, rgb(24, 144, 255) 100%) !important;
+  background-image:none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+  transform: translate(0, -4px);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) ease-in-out;
 }
