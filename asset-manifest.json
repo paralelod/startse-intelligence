@@ -1,16 +1,17 @@
 {
-  "main.css": "/startse-intelligence/static/css/main.826d94bb.chunk.css",
-  "main.js": "/startse-intelligence/static/js/main.747d5c91.chunk.js",
-  "main.js.map": "/startse-intelligence/static/js/main.747d5c91.chunk.js.map",
+  "main.css": "/startse-intelligence/static/css/main.fd0dca83.chunk.css",
+  "main.js": "/startse-intelligence/static/js/main.a41e0a1f.chunk.js",
+  "main.js.map": "/startse-intelligence/static/js/main.a41e0a1f.chunk.js.map",
   "runtime~main.js": "/startse-intelligence/static/js/runtime~main.88d0dc13.js",
   "runtime~main.js.map": "/startse-intelligence/static/js/runtime~main.88d0dc13.js.map",
   "static/css/2.d962b8be.chunk.css": "/startse-intelligence/static/css/2.d962b8be.chunk.css",
-  "static/js/2.a94dceb0.chunk.js": "/startse-intelligence/static/js/2.a94dceb0.chunk.js",
-  "static/js/2.a94dceb0.chunk.js.map": "/startse-intelligence/static/js/2.a94dceb0.chunk.js.map",
+  "static/js/2.f4f05410.chunk.js": "/startse-intelligence/static/js/2.f4f05410.chunk.js",
+  "static/js/2.f4f05410.chunk.js.map": "/startse-intelligence/static/js/2.f4f05410.chunk.js.map",
   "index.html": "/startse-intelligence/index.html",
-  "precache-manifest.ac45d2e64352e0acafaae05691a4d455.js": "/startse-intelligence/precache-manifest.ac45d2e64352e0acafaae05691a4d455.js",
+  "precache-manifest.9c681da9d5396c3a98d6ca8e6ae86330.js": "/startse-intelligence/precache-manifest.9c681da9d5396c3a98d6ca8e6ae86330.js",
   "service-worker.js": "/startse-intelligence/service-worker.js",
   "static/css/2.d962b8be.chunk.css.map": "/startse-intelligence/static/css/2.d962b8be.chunk.css.map",
-  "static/css/main.826d94bb.chunk.css.map": "/startse-intelligence/static/css/main.826d94bb.chunk.css.map",
-  "static/media/logo.svg": "/startse-intelligence/static/media/logo.efba5ad4.svg"
+  "static/css/main.fd0dca83.chunk.css.map": "/startse-intelligence/static/css/main.fd0dca83.chunk.css.map",
+  "static/media/logo.svg": "/startse-intelligence/static/media/logo.efba5ad4.svg",
+  "static/media/pattern.svg": "/startse-intelligence/static/media/pattern.b6a1f501.svg"
 }
