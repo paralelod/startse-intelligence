@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "b6a1f501b4c94b519181ce0840cdfdeb",
-    "url": "/startse-intelligence/static/media/pattern.b6a1f501.svg"
+    "revision": "f153883f94a9b404dafd8d26324ebc58",
+    "url": "/startse-intelligence/static/media/pattern.f153883f.svg"
   },
   {
     "revision": "efba5ad4738d1aa6663f7384a6a3007b",
@@ -16,23 +16,23 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/js/runtime~main.88d0dc13.js"
   },
   {
-    "revision": "a6206e83986e56b5a3c0",
-    "url": "/startse-intelligence/static/js/main.a41e0a1f.chunk.js"
+    "revision": "0c0648fb62e0d623313f",
+    "url": "/startse-intelligence/static/js/main.a9ef721f.chunk.js"
   },
   {
     "revision": "292619478cd2e1fb797e",
     "url": "/startse-intelligence/static/js/2.f4f05410.chunk.js"
   },
   {
-    "revision": "a6206e83986e56b5a3c0",
-    "url": "/startse-intelligence/static/css/main.fd0dca83.chunk.css"
+    "revision": "0c0648fb62e0d623313f",
+    "url": "/startse-intelligence/static/css/main.a9120b19.chunk.css"
   },
   {
     "revision": "292619478cd2e1fb797e",
     "url": "/startse-intelligence/static/css/2.d962b8be.chunk.css"
   },
   {
-    "revision": "06f5e30994c76d927a531db90289606b",
+    "revision": "ffbadd0b60cddb26128380ad285e4626",
     "url": "/startse-intelligence/index.html"
   }
 ];
