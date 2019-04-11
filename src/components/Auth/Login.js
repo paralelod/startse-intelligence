@@ -51,6 +51,7 @@ class NormalLoginForm extends React.Component {
                 <Input
                   prefix={<Icon type="user" style={{ fontSize: 13 }} />}
                   placeholder="Username"
+                  large
                 />
                 </div>
               )}
@@ -65,6 +66,7 @@ class NormalLoginForm extends React.Component {
                     prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
                     type="password"
                     placeholder="Password"
+                    large
                   />
                 </div>
               )}
@@ -76,6 +78,7 @@ class NormalLoginForm extends React.Component {
                   type="primary"
                   htmlType="submit"
                   className="buttonSpecial"
+                  large
                   // style={{backgroundImage: 'linear-gradient(90deg, #05aba3 3%, #1890FF 100%)', minWidth:'100%'}}
                 >
                   Log in

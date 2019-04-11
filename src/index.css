@@ -62,6 +62,7 @@ code {
     font-weight: 600 !important;
     box-shadow: 0 5px 24px rgba(0, 0, 0, 0.45) !important;
     transition: all 0.3s cubic-bezier(0.645, 0.55, 0.355, 1) ease-in-out;
+    height:40px;
 }
 
 .buttonSpecial:hover{

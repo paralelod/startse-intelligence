@@ -18,7 +18,7 @@ class SideNav extends Component {
           <Menu theme="dark" defaultSelectedKeys={['2']} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
             <Menu.Item key="logo">
               <Link to="/logged">
-                <LogoGlyph style={{marginLeft:'-8px'}} />
+                <LogoGlyph style={{marginLeft:'-12px'}} />
                 <span><LogoTypo /></span>
               </Link>
             </Menu.Item>
