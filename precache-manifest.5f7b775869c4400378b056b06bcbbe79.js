@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/media/card-thesis.e0dfd511.png"
   },
   {
-    "revision": "dab1a400a94397978125",
+    "revision": "21c584f65e2185aa8c60",
     "url": "/startse-intelligence/static/css/main.a9120b19.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/media/card-report.bfd491e9.png"
   },
   {
-    "revision": "dab1a400a94397978125",
-    "url": "/startse-intelligence/static/js/main.2ca7d51e.chunk.js"
+    "revision": "21c584f65e2185aa8c60",
+    "url": "/startse-intelligence/static/js/main.a9a7896a.chunk.js"
   },
   {
     "revision": "b3769458bd821be89cdaf43daa60cf1e",
@@ -44,7 +44,7 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/css/2.d962b8be.chunk.css"
   },
   {
-    "revision": "387ec869427e8eeee917c61f258704a4",
+    "revision": "7a1ab700085535ccacd800c5f38f755d",
     "url": "/startse-intelligence/index.html"
   }
 ];
