@@ -39,30 +39,14 @@ class Project extends Component{
         </Media>
 
         <Media query="(min-width: 1180px)">
+          
           <Layout>
-          <Sider 
-            collapsible 
-            collapsedWidth='0' 
-            theme='light'
-            width='280'
-            style={{zIndex:4,minHeight:'100vh'}}
-          >
-          </Sider>
-          <Layout>
+            <Header style={{background:'white', lineHeight:'64px'}}></Header>
             <Row>
               <Col xs={24} style={{padding:'12px 24px'}}>
                   <ProjectCards/>
               </Col>
             </Row>
-          </Layout>
-          <Sider 
-            collapsible 
-            reverseArrow 
-            collapsedWidth='0' 
-            theme='light'
-            width='240'
-          >
-          </Sider>
           </Layout>
         </Media> 
         

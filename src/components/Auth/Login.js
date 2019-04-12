@@ -32,7 +32,7 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div style={{background:'linear-gradient(90deg, #0C304D 3%, #04223A 100%)'}}>
-      <Row type="flex" justify="space-around" align="middle" style={{textAlign:'center',minHeight:'100vh',backgroundImage:`url(${pattern})`, backgroundSize:'cover'}}>
+      <Row type="flex" justify="space-around" align="middle" style={{textAlign:'center',minHeight:'100vh',backgroundImage:`url(${pattern})`, backgroundSize:'cover',backgroundPosition:'center'}}>
         <Col xs={18} md={8} lg={6}>
           <img src={logo}/>
            <br/><br/><br/>
