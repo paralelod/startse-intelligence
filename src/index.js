@@ -10,6 +10,7 @@ import Signup from './components/Auth/Signup';
 import RecoverPwd from './components/Auth/Pwd/RequestNew'
 import CreatePwd from './components/Auth/Pwd/CreateNew'
 import Portfolio from './components/Portfolio/Portfolio'
+import Report from './components/Report/ReportsList'
 import AppRoute from "./layouts/App/AppRoute";
 import DefaultRoute from "./layouts/Default/DefaultRoute";
 
@@ -26,7 +27,8 @@ ReactDOM.render((
         <Route exact path="/logged" render={() => (
             <Redirect to="/logged/portfolio"/>
         )}/>
-        <AppRoute path="/logged/portfolio" component={Portfolio}/>    
+        <AppRoute path="/logged/portfolio" component={Portfolio}/>
+        <AppRoute path="/logged/report" component={Report}/>    
     </HashRouter>
 ), document.getElementById('root'))
 

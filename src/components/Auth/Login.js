@@ -4,7 +4,7 @@ import { Row, Col,Form, Icon, Input, Button, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import '../../index.css';
 
-import pattern from '../../pattern.svg';
+import pattern from '../../pattern.png';
 import logo from '../../logo.svg';
 
 const FormItem = Form.Item;
@@ -32,12 +32,10 @@ class NormalLoginForm extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
       <div style={{background:'linear-gradient(90deg, #0C304D 3%, #04223A 100%)'}}>
-      <Row type="flex" justify="space-around" align="middle" style={{textAlign:'center',minHeight:'100vh',backgroundImage:`url(${pattern})`}}>
+      <Row type="flex" justify="space-around" align="middle" style={{textAlign:'center',minHeight:'100vh',backgroundImage:`url(${pattern})`, backgroundSize:'cover'}}>
         <Col xs={18} md={8} lg={6}>
           <img src={logo}/>
-          <br/><br/><br/>
-          <p style={{color:'white'}}>Don’t Have an Account? <Link to='/signup' style={{marginLeft:'8px'}}>Sign Up Now</Link></p>
-          <br/>
+           <br/><br/><br/>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <FormItem>
               {getFieldDecorator("userName", {
@@ -87,6 +85,8 @@ class NormalLoginForm extends React.Component {
             </FormItem>
           </Form>
           <p style={{color:'white'}}>Forgot Password? <Link to='/recover' style={{marginLeft:'8px'}}>Let Us Help</Link></p>
+          <br/><br/><br/>
+          <p style={{color:'white'}}>Don’t Have an Account? <Link to='/signup' style={{marginLeft:'8px'}}>Sign Up Now</Link></p>
         </Col>
       </Row>
       </div>

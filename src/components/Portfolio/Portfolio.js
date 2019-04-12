@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Layout,Menu,Tabs, Button } from 'antd';
-import Project from './Project/Project'
+import Project from './Project/ProjectsList'
 
 const { Header, Content, Sider } = Layout;
 const TabPane = Tabs.TabPane;
