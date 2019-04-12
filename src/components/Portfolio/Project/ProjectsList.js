@@ -31,7 +31,7 @@ class Project extends Component{
                 <ProjectMenu/>
               </Col>
               <Col xs={24} style={{padding:'12px 24px'}}>
-                  <Wizard/>
+                  {/* <Wizard/> */}
                   <ProjectCards/>
               </Col>
             </Row>
@@ -41,7 +41,15 @@ class Project extends Component{
         <Media query="(min-width: 1180px)">
           
           <Layout>
-            <Header style={{background:'white', lineHeight:'64px'}}></Header>
+            <Header style={{background:'white', lineHeight:'64px'}}>
+              <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="buttonSpecial"
+                    large
+                    style={{ minWidth:'auto',float:'Right',marginTop:'16px'}}
+                  >Createw Project</Button>
+            </Header>
             <Row>
               <Col xs={24} style={{padding:'12px 24px'}}>
                   <ProjectCards/>

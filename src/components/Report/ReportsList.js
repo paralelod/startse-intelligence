@@ -22,7 +22,7 @@ class Project extends Component{
   render(){
     return(
       <div>
-        <Media query="(max-width: 900px)">
+        <Media query="(max-width: 1180px)">
           <Layout>
             <Row>
               <Col xs={24} style={{padding:'12px 24px'}}>
@@ -35,7 +35,7 @@ class Project extends Component{
         <Media query="(min-width: 1180px)">
 
           <Layout>
-            <Header style={{background:'white', lineHeight:'64px'}}></Header>
+            <Header style={{background:'white'}}></Header>
             <Row>
               <Col xs={24} style={{padding:'12px 24px'}}>
                   <ProjectCards/>

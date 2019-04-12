@@ -65,6 +65,7 @@ class NormalLoginForm extends React.Component {
                     type="password"
                     placeholder="Password"
                     large
+                    error='errosss'
                   />
                 </div>
               )}
