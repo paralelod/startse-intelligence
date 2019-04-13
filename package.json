@@ -6,8 +6,13 @@
   "dependencies": {
     "antd": "^3.16.1",
     "array-move": "^2.1.0",
+    "babel-plugin-import": "^1.11.0",
+    "customize-cra": "^0.2.12",
     "gh-pages": "^2.0.1",
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
     "react": "^16.8.6",
+    "react-app-rewired": "^2.1.1",
     "react-beautiful-dnd": "^11.0.0-beta.3",
     "react-dom": "^16.8.6",
     "react-grid-layout": "^0.16.6",
@@ -19,9 +24,9 @@
     "react-step-wizard": "^5.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build"

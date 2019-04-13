@@ -1,8 +1,6 @@
 import React from 'react'; 
 import ReactDOM from 'react-dom';
 import { HashRouter, Route, Link,Switch, Redirect} from "react-router-dom";
-import 'antd/dist/antd.css';
-import '../../index.css';
 import {
   Row, Col, Collapse, Layout, Button,Dropdown, Avatar,Tabs,Menu, Typography, Card, Breadcrumb, Icon,PageHeader, Divider, 
 } from 'antd';

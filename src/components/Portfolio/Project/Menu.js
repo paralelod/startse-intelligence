@@ -28,42 +28,33 @@ class ProjectMenu extends Component{
   render(){
     return(
       
-     <Collapse
-            bordered={false} 
-            defaultActiveKey={this.props.showSummary}
-            expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
-          >
-            <Panel 
-              header="Project Really Long Title" 
-              key="ProjectSummary"
-              style={{fontSize:'18px', border:'none'}} 
-              >
+  
               <Collapse 
                 bordered={false} 
                 defaultActiveKey={['1']} 
               >
-                <Panel disabled header="Pipeline Startups" key="3" style={{fontSize:'18px'}} extra={lockExtra()}>
+                <Panel disabled header="Pipeline Startups" key="3">
                   <Menu defaultSelectedKeys={['None']} mode="inline">
                     <Menu.Item key="Pileline1">
                       <span>Canvas</span>
-                      <Icon type="pie-chart" />
+                      
                     </Menu.Item>
                     <Menu.Item key="Pipeline2">
                       <span>Startups List</span>
-                      <Icon type="pie-chart" />
+                      
                     </Menu.Item>
                   </Menu>
                 </Panel>
                 
-                <Panel disabled header="Horizontes Inovação" key="2" style={{fontSize:'18px'}} extra={lockExtra()}>
+                <Panel disabled header="Horizontes Inovação" key="2">
                   <Menu defaultSelectedKeys={['None']} mode="inline">
                     <Menu.Item key="Horziontes1">
                       <span>Dashboard</span>
-                      <Icon type="pie-chart" />
+                      
                     </Menu.Item>
                     <Menu.Item key="Horziontes2">
                       <span>Startups List</span>
-                      <Icon type="pie-chart" />
+                      
                     </Menu.Item>
                   </Menu>
                 </Panel>
@@ -73,46 +64,46 @@ class ProjectMenu extends Component{
                     defaultActiveKey={['1']}
                     expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
                   >
-                  <Panel disabled extra={lockExtra()} header="Resultados" style={{border:'none'}}>
+                  <Panel disabled header="Resultados" style={{border:'none'}}>
                     <Menu defaultSelectedKeys={['1']} mode="inline">
                       <Menu.Item key="1">
                         <span>Industry Overview</span>
-                        <Icon type="pie-chart" />
+                        
                       </Menu.Item>
                       <Menu.Item key="2">
                         <span>Startups List</span>
-                        <Icon type="pie-chart" />
+                        
                       </Menu.Item>
                     </Menu>
                   </Panel>
                   <Panel header="Pesquisa" style={{border:'none'}}>
                     <Menu defaultSelectedKeys={['1']} mode="inline">
                       <Menu.Item key="1">
-                        <Icon type="pie-chart" />
+                        
                         <span>Industry Overview</span>
                       </Menu.Item>
                       <Menu.Item key="2">
-                        <Icon type="pie-chart" />
+                        
                         <span>Business Model</span>
                       </Menu.Item>
                       <Menu.Item key="3">
-                        <Icon type="pie-chart" />
+                        
                         <span>Declining Business Units</span>
                       </Menu.Item>
                       <Menu.Item key="4">
-                        <Icon type="pie-chart" />
+                        
                         <span>Trends, Technologies and Market</span>
                       </Menu.Item>
                       <Menu.Item key="5">
-                        <Icon type="pie-chart" />
+                        
                         <span>Threats, Opportunities and Competitors</span>
                       </Menu.Item>
                       <Menu.Item key="6">
-                      <Icon type="pie-chart" />
+                      
                         <span>Strategy</span>
                       </Menu.Item>
                       <Menu.Item key="7">
-                        <Icon type="pie-chart" />
+                        
                         <span>Focus</span>
                       </Menu.Item>
                     </Menu>
@@ -122,8 +113,6 @@ class ProjectMenu extends Component{
                 </Panel>
                 
             </Collapse>
-        </Panel>
-      </Collapse>
     )
   }
 }

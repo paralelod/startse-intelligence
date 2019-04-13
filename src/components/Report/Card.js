@@ -19,7 +19,7 @@ const SortableItem = SortableElement(({value}) => <Col xs={24} sm={12} md={12} l
 
 const SortableList = SortableContainer(({items}) => {
   return (
-    <Row style={{maxWidth:'900px',margin:'auto'}}>
+    <Row style={{maxWidth:'1110px',margin:'auto'}}>
       {items.map((value, index) => (
         <SortableItem key={`item-${index}`} index={index} value={value}  />
       ))}

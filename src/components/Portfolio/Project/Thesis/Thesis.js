@@ -60,7 +60,7 @@ class ProjectThesis extends Component{
           </Col>
           <br/><br/><br/><br/><br/>
           <Col xs={24}>
-            <Card>
+            <Card hoverable>
               <Collapse defaultActiveKey={['1']}>
                 <Panel header="3 Years" key="1" extra={genExtra()}>
                   <div>hello</div>

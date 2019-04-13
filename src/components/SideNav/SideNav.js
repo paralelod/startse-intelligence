@@ -16,7 +16,7 @@ class SideNav extends Component {
     return(
       <Sider collapsible style={{ position: 'relative',zIndex:2}}>
         <div style={{ position: 'fixed', width:'inherit',paddingTop:'16px'}}>
-          <Menu theme="dark" defaultSelectedKeys={[location.pathname]} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
+          <Menu theme="dark" className="sideMenu" defaultSelectedKeys={[location.pathname]} mode="inline" style={{overflow: 'auto', height: '100vh', left: 0}}>
             <Menu.Item key="logo">
               <Link to="/logged">
                 <LogoGlyph style={{marginLeft:'-12px'}} />
