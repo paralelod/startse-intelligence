@@ -8,7 +8,7 @@ import thesis from './card-report.png'
 // import styles from './Item.css';
 import './Item.css';
 
-const DragHandle = sortableHandle(() => <span >:::Drag Me</span>);
+const DragHandle = sortableHandle(() => <span>:::Drag Me</span>);
 
 
 function Item(props) {
@@ -18,7 +18,15 @@ function Item(props) {
     
     return (
       <Col lg={8} xl={6}>
-        <DragHandle/>
+        <div className={classNames(
+          "Item",
+          selected && !dragging && ItemSelected,
+          dragging && "dragging",
+        )}
+        onClick={() => onClick(value)}>
+          <DragHandle/>
+        </div>
+        
         <Link to='/logged/portfolio' style={{zIndex:'9999', position:'absolute',bottom:'124px', left:'35%'}}>{value.title}</Link>
         <div style={{userSelect:'none',pointerEvents:'none'}}> 
           <img src={thesis} style={{userSelect:'none',pointerEvents:'none',width:"100%", padding:'8px'}}/>
