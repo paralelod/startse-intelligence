@@ -4,32 +4,28 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/media/card-pipeline.816728d9.png"
   },
   {
-    "revision": "055c047be186d71bc2b8",
-    "url": "/startse-intelligence/static/css/main.8505d188.chunk.css"
+    "revision": "abfdea00fbd025220cdd",
+    "url": "/startse-intelligence/static/css/main.646e5493.chunk.css"
   },
   {
     "revision": "e37e507951956d1f1aa2",
     "url": "/startse-intelligence/static/js/runtime~main.88d0dc13.js"
   },
   {
-    "revision": "8da83f8464b13c294b2973dd59662e2f",
-    "url": "/startse-intelligence/static/media/logo.8da83f84.svg"
+    "revision": "f416e173c2bfca07159678fa6f9bb0bd",
+    "url": "/startse-intelligence/static/media/card-report.f416e173.png"
   },
   {
-    "revision": "b54cd2b412d09425e1b5",
-    "url": "/startse-intelligence/static/js/2.19d3639b.chunk.js"
+    "revision": "5a74ad5c3794315dfe18",
+    "url": "/startse-intelligence/static/js/2.f4b18883.chunk.js"
   },
   {
     "revision": "2e73cd3d6f5435fc9eb0c0c521574532",
     "url": "/startse-intelligence/static/media/card-thesis.2e73cd3d.png"
   },
   {
-    "revision": "055c047be186d71bc2b8",
-    "url": "/startse-intelligence/static/js/main.6660a73e.chunk.js"
-  },
-  {
-    "revision": "f416e173c2bfca07159678fa6f9bb0bd",
-    "url": "/startse-intelligence/static/media/card-report.f416e173.png"
+    "revision": "abfdea00fbd025220cdd",
+    "url": "/startse-intelligence/static/js/main.21553bb5.chunk.js"
   },
   {
     "revision": "efba5ad4738d1aa6663f7384a6a3007b",
@@ -40,11 +36,15 @@ self.__precacheManifest = [
     "url": "/startse-intelligence/static/media/pattern.d5183b68.png"
   },
   {
-    "revision": "b54cd2b412d09425e1b5",
-    "url": "/startse-intelligence/static/css/2.a27b44a2.chunk.css"
+    "revision": "8da83f8464b13c294b2973dd59662e2f",
+    "url": "/startse-intelligence/static/media/logo.8da83f84.svg"
   },
   {
-    "revision": "74ba23ea581b1802b4658c1821e53d84",
+    "revision": "5a74ad5c3794315dfe18",
+    "url": "/startse-intelligence/static/css/2.689b431b.chunk.css"
+  },
+  {
+    "revision": "62d332e036e7141cb4ad6b841ede9ff9",
     "url": "/startse-intelligence/index.html"
   }
 ];
