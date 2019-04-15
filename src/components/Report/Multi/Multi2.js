@@ -170,6 +170,7 @@ class GroupedItems extends React.Component{
               />
               
               <SortableList
+                useDragHandle
                 data={data.filter(this.filterItems)}
                 // items={data.filter(this.filterItems)}
                 sortingItemKey={sortingItemKey}
