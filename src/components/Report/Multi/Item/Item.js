@@ -27,7 +27,7 @@ function Item(props) {
           <DragHandle/>
         </div>
         
-        <Link to='/logged/portfolio' style={{zIndex:'9999', position:'absolute',bottom:'124px', left:'35%'}}>{value.title}</Link>
+        <Link to='/logged/portfolio' style={{zIndex:'9999', position:'absolute',bottom:'124px', left:'35%'}}>DOWNLOAD</Link>
         <div style={{userSelect:'none',pointerEvents:'none'}}> 
           <img src={thesis} style={{userSelect:'none',pointerEvents:'none',width:"100%", padding:'8px'}}/>
           
