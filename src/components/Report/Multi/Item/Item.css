@@ -1,0 +1,47 @@
+.Item {
+
+  user-select: none;
+  position:relative;
+}
+
+.Item:first-child {
+  border-top: none;
+}
+
+.selected {
+  /* background: #759fff; */
+  color: #fff;
+  font-weight: 600;
+  background-color: #1890FF;
+}
+
+.selected + .Item {
+  border-top: none;
+}
+
+.dragging {
+  border-radius: 3px;
+  box-shadow: 0 5px 8px 4px rgba(0, 0, 0, 0.2);
+  background-color: #1890FF;
+  /* visibility: visible !important;
+  opacity: .1 !important; */
+}
+
+.dragging img, .selected img{
+  opacity:.7
+}
+
+
+
+.Badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 0.35em 0.5em;
+  border-radius: 0.3rem;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+  background-color: #f75959;
+  border: 1px solid #da4553;
+}

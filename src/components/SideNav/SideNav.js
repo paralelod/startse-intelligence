@@ -25,27 +25,27 @@ class SideNav extends Component {
             </Menu.Item>
             <Menu.Item key="/logged/report">
               <Link to="/logged/report" activeClassName='item-selected'>
-                <Icon type="compass" theme="filled" />
+                <Icon type="compass" theme="filled" style={{fontSize:'18px'}} />
                 <span>Reports</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="/logged/portfolio">
               <Link to="/logged/portfolio" activeClassName='item-selected'>
-                <Icon type="thunderbolt" theme="filled"/>
+                <Icon type="thunderbolt" theme="filled" style={{fontSize:'18px'}}/>
                 <span>Portfolio</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="3">
-              <Icon type="bulb" theme="filled" />
+              <Icon type="bulb" theme="filled" style={{fontSize:'18px'}}/>
               <span>Inteligence</span>
             </Menu.Item>
             <Menu.Item key="4" style={{position:'absolute', bottom:'120px'}}>
-              <Icon type="setting" theme="filled" />
+              <Icon type="setting" theme="filled" style={{fontSize:'18px'}}/>
               <span>Settings</span>
             </Menu.Item>
             <Menu.Item key="5" style={{position:'absolute', bottom:'80px'}}>
             <Link to="/" activeClassName='item-selected'>
-                <Icon type="logout"/>
+                <Icon type="logout" style={{fontSize:'18px'}}/>
                 <span>Logout</span>
               </Link>
             </Menu.Item>

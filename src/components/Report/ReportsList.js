@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   Dropdown,Row, Col, Collapse, Layout, Button, Tabs,Menu, Typography, Card, Icon, 
 } from 'antd';
-import ProjectCards from './Card'
+import ProjectCards from './Multi/Multi2'
 
 
 import Media from 'react-media';
