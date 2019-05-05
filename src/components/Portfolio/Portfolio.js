@@ -12,8 +12,8 @@ class Tabbed extends React.Component {
     super(props);
     this.newTabIndex = 0;
     const panes = [
-      { title: 'Project Title 1', content: <ProjectsList/>, key: '1' },
-      { title: 'Project Title 2', content: <Project/>, key: '2' },
+      { title: 'All Projects', content: <ProjectsList/>, key: '1' },
+      { title: 'Project Thesis', content: <Project/>, key: '2' },
     ];
     this.state = {
       activeKey: panes[0].key,
