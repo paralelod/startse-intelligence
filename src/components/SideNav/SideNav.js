@@ -23,14 +23,14 @@ class SideNav extends Component {
                 <span><LogoTypo /></span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="/logged/report">
-              <Link to="/logged/report" activeClassName='item-selected'>
+            <Menu.Item key="/logged/reports">
+              <Link to="/logged/reports" activeClassName='item-selected'>
                 <Icon type="compass" theme="filled" style={{fontSize:'18px'}} />
                 <span>Reports</span>
               </Link>
             </Menu.Item>
-            <Menu.Item key="/logged/portfolio">
-              <Link to="/logged/portfolio" activeClassName='item-selected'>
+            <Menu.Item key="/logged/projects">
+              <Link to="/logged/projects" activeClassName='item-selected'>
                 <Icon type="thunderbolt" theme="filled" style={{fontSize:'18px'}}/>
                 <span>Portfolio</span>
               </Link>

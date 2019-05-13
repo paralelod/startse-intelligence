@@ -5,7 +5,8 @@ import {
 } from 'antd';
 import ProjectMenu from './Menu'
 import Wizard from './Thesis/Thesis'
-
+import MultiWizard from './Thesis/MultiSelect'
+import { HashRouter, Route, Switch, Redirect,withRouter} from "react-router-dom";
 
 import Media from 'react-media';
 
@@ -17,6 +18,7 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 const TabPane = Tabs.TabPane;
 
+const baseUrl = '/project'
 
 
 class Project extends Component{
@@ -39,20 +41,6 @@ class Project extends Component{
   render(){
     return(
       <div>
-        <Media query="(max-width: 1179px)">
-          <Layout>
-            <Row>
-              <Col xs={24} style={{padding:'16px 0px 16px 4px',background:'#fff'}}>
-                <ProjectMenu/>
-              </Col>
-              <Col xs={24} style={{padding:'12px 24px'}}>
-                  <Wizard/>
-              </Col>
-            </Row>
-          </Layout>
-        </Media>
-
-        <Media query="(min-width: 1180px)">
         <Layout>
             <Row style={{minHeight:'64px',padding:'0 24px', background:'white'}} type="flex" justify="center" align="middle">
               <Col xs={24}>
@@ -61,37 +49,49 @@ class Project extends Component{
                   type={this.state.collapsedLeft ? 'menu-unfold' : 'menu-fold'}
                   onClick={this.toggleLeft}
                 />
-                  <span style={{fontSize:'18px',marginLeft:'8px'}}>Project Title</span>
-            <span style={{float:'right'}}>
-            
-            <Icon
-                className="trigger"
-                type={this.state.collapsedRight ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggleRight}
+                <span style={{fontSize:'18px',marginLeft:'8px'}}>Project Title</span>
+                <span style={{float:'right'}}>
                 
-              />
-            </span>
+                <Icon
+                    className="trigger"
+                    type={this.state.collapsedRight ? 'menu-unfold' : 'menu-fold'}
+                    onClick={this.toggleRight}
+                    
+                  />
+                </span>
               </Col>
             </Row>
+            {/* Top Menu */}
             <Layout>
-            <Sider 
-              collapsible 
-              collapsedWidth='0' 
-              theme='light'
-              width='280'
-              style={{zIndex:4,minHeight:'100vh'}}
-              collapsed={this.state.collapsedLeft}
-              trigger={null}
-            >
-              <ProjectMenu showSummary='ProjectSummary'/>
-            </Sider>
-            <Layout>
-              <Row>
-                <Col xs={24} style={{padding:'12px 24px'}}>
-                    <Wizard/>
-                </Col>
-              </Row>
-            </Layout>
+              <Sider 
+                collapsible 
+                collapsedWidth='0' 
+                theme='light'
+                width='280'
+                style={{zIndex:4,minHeight:'100vh'}}
+                collapsed={this.state.collapsedLeft}
+                trigger={null}
+              >
+                <ProjectMenu showSummary='ProjectSummary' activeKey={this.props.activeKey}/>
+              </Sider>
+              {/* Project Side Menu */}
+              <Layout>
+                <Row>
+                  <Col xs={24} style={{padding:'12px 24px'}}>
+                    <Switch>
+                    <Route exact path={`/tabs/${this.props.activeKey}${baseUrl}`} render={() => (
+                        <Wizard/>
+                    )}/>
+                    <Route exact path={`/tabs/${this.props.activeKey}/1`} render={() => (
+                        <Wizard/>
+                    )}/>
+                    <Route exact path={`/tabs/${this.props.activeKey}${baseUrl}/wiz`} render={() => (
+                        <MultiWizard/>
+                    )}/>
+                    </Switch>
+                  </Col>
+                </Row>
+              </Layout>
             <Sider 
               collapsible 
               reverseArrow 
@@ -102,16 +102,14 @@ class Project extends Component{
               trigger={null}
             >
             </Sider>
-            </Layout>
           </Layout>
-        </Media> 
-        
+        </Layout>
       </div>
     )
   }
 }
 
-export default Project
+export default withRouter(Project)
 
 
 

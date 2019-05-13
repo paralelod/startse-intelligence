@@ -7,7 +7,7 @@ const DefaultRoute = ({ component: Component, ...rest }) => {
   //todo: logic for validate user 
 
   return (
-    <Route {...rest} render={matchProps => (
+    <Route {...rest} exact render={matchProps => (
       <DefaultLayout>
         <Component {...matchProps} />
       </DefaultLayout>

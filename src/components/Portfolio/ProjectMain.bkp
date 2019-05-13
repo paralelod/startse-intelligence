@@ -1,0 +1,171 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Row, Col ,Layout,Menu,Tabs, Button } from 'antd';
+import ProjectsList from './Project/ProjectsList'
+import Project from './Project/Project';
+import { NavLink,Link,HashRouter,withRouter, Route, Switch, Redirect} from "react-router-dom";
+import thesis from './Project/card-thesis.png'
+import pipe from './Project/card-pipeline.png'
+
+const TabPane = Tabs.TabPane;
+
+
+
+const MyCard =(props,event)=>{
+  return(
+    <Col xs={24} sm={12} md={12} lg={8} style={{padding:'4px'}}>
+          <Link to={`/tabs/${props.activeKey}/reports`} onClick={()=>props.updateKey} >
+            <img src={thesis} style={{width:'100%'}}/>
+          </Link>
+        </Col>
+  )
+}
+const CardsList =(props,event)=>{
+  return(
+    <Row style={{maxWidth:'1110px',margin:'auto'}}>
+          <MyCard activeKey={props.activeKey} updateKey={props.updateKey} />
+          <MyCard activeKey={props.activeKey}/>
+          <MyCard activeKey={props.activeKey}/>
+      </Row>
+  )
+}
+const NewProject=(props)=>{
+  return(
+    <Project activeKey={props.activeKey} updateKey={props.updateKey}/>
+  )
+}
+const MyRoutes = (props) => {
+  return (
+    <div>
+      
+    <Route exact path={`/tabs/${props.activeKey}/reports`} render={() => (
+            <NewProject activeKey={props.activeKey} updateKey={props.updateKey}/>
+        )} />
+        <Route exact path={`/tabs/${props.activeKey}/reports/wiz`} render={() => (
+            <NewProject activeKey={props.activeKey}/>
+        )} />
+    <Route exact path={`/tabs/${props.activeKey}`} render={() => (
+            <CardsList activeKey={props.activeKey}/>
+        )}/>
+  </div>
+  );
+}
+
+
+class myTabs extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    
+    const StateRoutes=()=>{
+      return(
+        <MyRoutes activeKey={this.state.activeKey}/>
+      )
+    }
+    
+    const panes = [
+      { title: 'Tab 1', content: <StateRoutes/>, key: '1' },
+      { title: 'Tab 2', content: <StateRoutes/>, key: '2' },
+      {
+        title: 'Tab 3', content: 'Content of Tab 3', key: '3', closable: false,
+      },
+    ];
+
+    this.state = {
+      activeKey: panes[0].key,
+      panes,
+    };
+  }
+
+  updateKey = (activeKey) => {
+    
+    this.setState(state => {
+      const list = state.panes.map(item => item.key = item.key+'/reports');
+
+      return {
+        list,
+      };
+    });
+    
+  }
+
+  onChange = (activeKey) => {
+    this.setState({ activeKey });
+    this.props.history.push(`/tabs/${activeKey}`);
+  }
+
+  onEdit = (targetKey,action) => {
+    this[action](targetKey);
+  }
+
+  add = () => {
+    const StateRoutes=()=>{
+      return(
+        <MyRoutes activeKey={this.state.activeKey}/>
+      )
+    }
+    const panes = this.state.panes;
+    const activeKey = `newTab${this.newTabIndex++}`;
+    panes.push({ title: 'New Tab', content: <StateRoutes/>, key: activeKey });
+    this.setState({ panes, activeKey });
+    this.props.history.push(`/tabs/${activeKey}`);
+  }
+
+  remove = (targetKey) => {
+    let activeKey = this.state.activeKey;
+    let lastIndex;
+    this.state.panes.forEach((pane, i) => {
+      if (pane.key === targetKey) {
+        lastIndex = i - 1;
+      }
+    });
+    const panes = this.state.panes.filter(pane => pane.key !== targetKey);
+    if (panes.length && activeKey === targetKey) {
+      if (lastIndex >= 0) {
+        activeKey = panes[lastIndex].key;
+        
+      } else {
+        activeKey = panes[0].key;
+        
+      }
+    }
+    this.setState({ panes, activeKey });
+    this.props.history.push(`/tabs/${activeKey}`);
+  }
+
+  render() {
+    return (
+      <Route
+            path="/tabs/:tab?"
+            render={({ match }) => {
+              return (
+                <div className="card-container">
+                <Route exact path={"/tabs"} render={() => (
+                    <Redirect to="/tabs/1"/>
+                )}/>
+                
+                  <Switch>
+                    <Tabs
+                      type="card"
+                      defaultActiveKey={match.params.tab}
+                      activeKey={match.params.tab}
+                      onChange={this.onChange}
+                      type="editable-card"
+                      onEdit={this.onEdit}
+                      tabBarStyle={{position:'relative',top:'16px',maxWidth:'93%',zIndex:3,display: 'inline-block'}}
+                    >
+                      {this.state.panes.map(pane =>  
+                      <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)
+                      }
+                    </Tabs>
+                  </Switch>
+                </div>
+              );
+            }}
+          />
+    )
+  }
+}
+
+
+export default withRouter(myTabs)

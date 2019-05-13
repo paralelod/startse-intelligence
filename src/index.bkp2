@@ -1,0 +1,91 @@
+import React, { Component }  from 'react';
+import ReactDOM from 'react-dom';
+import * as serviceWorker from './serviceWorker';
+import { HashRouter, BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+
+import App from './App';
+import Login from './components/Auth/Login'
+import Signup from './components/Auth/Signup';
+import RecoverPwd from './components/Auth/Pwd/RequestNew'
+import CreatePwd from './components/Auth/Pwd/CreateNew'
+import Portfolio from './components/Portfolio/Portfolio'
+import Project from './components/Portfolio/ProjectMain'
+import Report from './components/Report/ReportsList'
+import AppRoute from "./layouts/App/AppRoute";
+import DefaultRoute from "./layouts/Default/DefaultRoute";
+
+import {
+  Row, Col, Collapse, Layout, Button,Dropdown, Avatar,Tabs,Menu, Typography, Card, Breadcrumb, Icon,PageHeader, Divider, 
+} from 'antd';
+
+import Media from 'react-media';
+
+import TopNav from './components/TopNav/TopNav';
+import SideNav from './components/SideNav/SideNav';
+
+const TabPane = Tabs.TabPane;
+
+const { Header, Content, Sider } = Layout;
+
+
+
+ReactDOM.render((
+    <BrowserRouter basename='/'>
+        <Route exact path="/" render={() => (
+            <Redirect to="/login"/>
+        )}/>
+        <Layout style={{background:'#003955'}}>
+          <SideNav/>
+          <Content style={{background:'transparent'}}>
+          <div>
+          <Switch>
+          
+            <Route
+              path="/tabs/:tab?"
+              render={({ match, history }) => {
+                return (
+                  <div className="card-container">
+                    <Switch>
+                      <Tabs
+                        type="card"
+                        defaultActiveKey={match.params.tab}
+                        onChange={key => {
+                          console.log(match);
+                          history.push(`/tabs/${key}`);
+                        }}
+                        type="editable-card"
+                      >
+                        <TabPane tab="Tab Title 1" key="1">
+                          <p>Content of Tab Pane 1</p>
+                          <p>Content of Tab Pane 1</p>
+                          <p>Content of Tab Pane 1</p>
+                        </TabPane>
+                        <TabPane tab="Tab Title 2" key="2">
+                          <p>Content of Tab Pane 2</p>
+                          <p>Content of Tab Pane 2</p>
+                          <p>Content of Tab Pane 2</p>
+                        </TabPane>
+                        <TabPane tab="Tab Title 3" key="3">
+                          <p>Content of Tab Pane 3</p>
+                          <p>Content of Tab Pane 3</p>
+                          <p>Content of Tab Pane 3</p>
+                        </TabPane>
+                      </Tabs>
+                    </Switch>
+                  </div>
+                );
+              }}
+            />
+          </Switch>
+        </div>
+          </Content>
+        </Layout>
+           
+    </BrowserRouter>
+), document.getElementById('root'))
+
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

@@ -40,6 +40,7 @@ const genExtra = () => (
 class ProjectThesis extends Component{
   render(){
     return(
+      
       <div>
         <Row>
             <Col xs={24} md={16}>

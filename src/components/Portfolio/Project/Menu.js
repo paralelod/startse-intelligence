@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   Dropdown,Row, Col, Tree,Breadcrumb,Collapse, Layout, Button, Tabs,Menu, Typography, Card, Icon, 
 } from 'antd';
-
+import { NavLink,Link,HashRouter,withRouter, Route, Switch, Redirect} from "react-router-dom";
 
 const { TreeNode } = Tree;
 const { Header, Content, Sider } = Layout;
@@ -24,7 +24,10 @@ const lockExtra = () => (
   />
 );
 
+
+
 class ProjectMenu extends Component{
+  
   render(){
     return(
       
@@ -64,23 +67,12 @@ class ProjectMenu extends Component{
                     defaultActiveKey={['1']}
                     expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
                   >
-                  <Panel disabled header="Resultados" style={{border:'none'}}>
-                    <Menu defaultSelectedKeys={['1']} mode="inline">
-                      <Menu.Item key="1">
-                        <span>Industry Overview</span>
-                        
-                      </Menu.Item>
-                      <Menu.Item key="2">
-                        <span>Startups List</span>
-                        
-                      </Menu.Item>
-                    </Menu>
-                  </Panel>
+                  <div>Link</div>
                   <Panel header="Pesquisa" style={{border:'none'}}>
                     <Menu defaultSelectedKeys={['1']} mode="inline">
                       <Menu.Item key="1">
                         
-                        <span>Industry Overview</span>
+                      <Link exact to={`/tabs/${this.props.activeKey}/project/wiz`}>Overview</Link>
                       </Menu.Item>
                       <Menu.Item key="2">
                         

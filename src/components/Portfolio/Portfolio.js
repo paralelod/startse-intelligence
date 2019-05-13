@@ -13,8 +13,9 @@ class Tabbed extends React.Component {
     this.newTabIndex = 0;
     const panes = [
       { title: 'All Projects', content: <ProjectsList/>, key: '1' },
-      { title: 'Project Thesis', content: <Project/>, key: '2' },
+      // { title: 'Project Thesis', content: <Project/>, key: '2' },
     ];
+    
     this.state = {
       activeKey: panes[0].key,
       panes,
@@ -32,7 +33,7 @@ class Tabbed extends React.Component {
   add = () => {
     const panes = this.state.panes;
     const activeKey = `newTab${this.newTabIndex++}`;
-    panes.push({ title: 'New Tab', content: <ProjectsList/>, key: activeKey });
+    panes.push({ title: 'All Projects', content: <ProjectsList/>, key: activeKey });
     this.setState({ panes, activeKey });
   }
 
@@ -54,11 +55,14 @@ class Tabbed extends React.Component {
     }
     this.setState({ panes, activeKey });
   }
+  goToProject() {
+    
+}
+
 
   render() {
     return (
       <div style={{position:'relative'}}>
-        
         <Tabs
           onChange={this.onChange}
           activeKey={this.state.activeKey}
@@ -68,7 +72,8 @@ class Tabbed extends React.Component {
           // style={{display: 'inline-block'}}
           tabBarStyle={{position:'relative',top:'16px',maxWidth:'93%',zIndex:3,display: 'inline-block'}}
         >
-          {this.state.panes.map(pane => <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
+          {this.state.panes.map(pane =>  
+            <TabPane tab={pane.title} key={pane.key}>{pane.content}</TabPane>)}
         </Tabs>
       </div>
     );
